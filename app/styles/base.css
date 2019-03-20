@@ -1,0 +1,52 @@
+@import url("fonts.css");
+@import url("../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+* {
+  box-sizing: border-box;
+  outline:0;
+}
+
+*:focus {
+  outline:0 !important;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: robotoregular, robotolight, sans-serif;
+}
+
+body {
+  align-items: center;
+  background-color: #21252b;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.form {
+  padding: 0px 20px 0px 20px;
+}
+
+.form label {
+  color: white;
+}
+
+.form .fd-file {
+  cursor: pointer;
+}
+
+.form .custom-file label {
+  color: inherit;
+}
+
+.form .form-group {
+  margin-top: 20px;
+}

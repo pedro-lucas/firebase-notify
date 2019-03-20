@@ -1,0 +1,10 @@
+.toolbar-view {
+  background-color: black;
+  padding: 10px;
+  text-align: right;
+}
+
+.spinner {
+  vertical-align: middle;
+  margin-right: 20px;
+}

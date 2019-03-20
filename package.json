@@ -1,0 +1,31 @@
+{
+  "name": "firebase-message",
+  "version": "1.0.0",
+  "description": "Envio de notificações teste para o firebase",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node tasks/start --execute",
+    "build": "gulp tasks/build --execute"
+  },
+  "author": "Pedro Lucas <pedro@objota.com.br>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.0",
+    "electron-rebuild": "^1.8.4",
+    "electron-packager": "^11.2.1",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "firebase-admin": "^7.1.0",
+    "i18n": "^0.8.3",
+    "jquery": "^3.3.1",
+    "octicons": "^4.4.0",
+    "underscore": "^1.9.1"
+  },
+  "config": {
+    "name": "Firebase Notify",
+    "build-version": "1.0.0",
+    "app-bundle-id": "com.appmania.firebase.notify"
+  }
+}

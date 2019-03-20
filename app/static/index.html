@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Firebase Notify</title>
+  <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="main">
+  <form class="was-validated form">
+    <div class="form-group">
+      <label for="inputAddress">Firebase key</label>
+      <div class="custom-file">
+        <label class="custom-file-label lb-file"></label>
+        <input type="text" class="custom-file-input fd-file" value="0">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Token</label>
+      <input type="text" class="form-control fd-token" placeholder="Token do device" required>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Título</label>
+      <input type="text" class="form-control fd-title" placeholder="Título" required>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Descrição</label>
+      <input type="text" class="form-control fd-description" placeholder="Descrição" required>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Payload(JSON)</label>
+      <textarea class="form-control fd-payload" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Android(JSON)</label>
+      <textarea class="form-control fd-android" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">iOS(JSON)</label>
+      <textarea class="form-control fd-ios" rows="3"></textarea>
+    </div>
+  </form>
+  <script>
+    require('../controllers/main-controller');
+  </script>
+</body>
+
+</html>
