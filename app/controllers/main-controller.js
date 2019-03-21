@@ -15,6 +15,7 @@ class MainController extends Controller {
         super();
         this.initialize();
         this.app = null;
+        this.apps = {};
     }
 
     initialize() {
@@ -71,6 +72,9 @@ class MainController extends Controller {
 
             try {
                 config = require(configFile);
+                if(config.project_id === undefined) {
+                    throw "Arquivo de projeto inválido";
+                }
             } catch (e) {
                 NotificationView.error('Arquivo de configuração inválido', {
                     dismissable: true
@@ -78,10 +82,15 @@ class MainController extends Controller {
                 return;
             }
 
-            this.app = firebaseAdmin.initializeApp({
-                credential: firebaseAdmin.credential.cert(configFile),
-                databaseURL: `https://${config.project_id}.firebaseio.com`
-            });
+            if(this.apps[config.project_id] !== undefined) {
+                this.app = this.apps[config.project_id];
+            }else{
+                this.app = firebaseAdmin.initializeApp({
+                    credential: firebaseAdmin.credential.cert(configFile),
+                    databaseURL: `https://${config.project_id}.firebaseio.com`
+                }, config.project_id);
+                this.apps[config.project_id] = this.app;
+            }
 
         }
 
